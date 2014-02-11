@@ -42,6 +42,8 @@ Une fois l'extension installée, utilisez les champs personnalisés suivant pour
 Pour toute question, contactez Clément Bourgoin : http://nokto.net/contact
 
 == Changelog ==
+1.0.2 (11/02/2014)
+ - Suppression du fichier inutile wp_auto_update.class.php
 1.0.1 (10/02/2014)
  - Suppression de la mise à jour automatique
  - Mise à jour de readme.txt
