@@ -3,7 +3,7 @@
  * Plugin Name: Citriq.net
  * Plugin URI: http://nokto.net/citriq-wordpress-plugin/
  * Description: Citriq.net vous permet d'échanger facilement des liens avec d'autres blogs littéraires qui critiquent les mêmes livres que vous. Cette extension pour Wordpress vous permettra de référencer automatiquement vos critiques littéraires sur Citriq.net et d'afficher à la fin de vos articles les liens vers d'autres critiques du même livre. Plus d'informations : http://nokto.net/citriq-wordpress-plugin/
- * Version: 1.0
+ * Version: 1.0.1
  * Author: Cl&eacute;ment Bourgoin
  * Author URI: http://nokto.net/
  * License: GPL2
@@ -25,7 +25,7 @@
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
  
-    define('CITRIQ_VERSION','1.0');
+    define('CITRIQ_VERSION','1.0.1');
  
     class citriq
     {
@@ -52,16 +52,5 @@
     $citriq = new citriq();
     
     add_filter('the_content',array($citriq,'crawl'));
-
-    // Auto-update    
-    add_action('init', 'wptuts_activate_au');
-    function wptuts_activate_au()
-    {
-        require_once('wp_auto_update.class.php');
-        $wptuts_plugin_current_version = CITRIQ_VERSION;
-        $wptuts_plugin_remote_path = 'http://labs.nokto.net/citriq-wordpress/dl';
-        $wptuts_plugin_slug = plugin_basename(__FILE__);
-        new wp_auto_update($wptuts_plugin_current_version, $wptuts_plugin_remote_path, $wptuts_plugin_slug);
-    }
  
 ?>
